@@ -1,0 +1,22 @@
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: xhr-auth-service
+
+build:
+  esbuild: false
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-typescript
+  - serverless-dotenv-plugin
+
+functions:
+  sendNotification:
+    handler: src/modules//handlers/Handler.handler
+    events: 
+      - httpApi:
+          path: /api/*
+          method: post
