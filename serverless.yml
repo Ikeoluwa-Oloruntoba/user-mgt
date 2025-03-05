@@ -17,3 +17,23 @@ functions:
   - ${file(./src/routes/serverless/functions/users.yml)}
   - ${file(./src/routes/serverless/functions/posts.yml)}
   - ${file(./src/routes/serverless/functions/address.yml)}
+
+package:
+  patterns:
+    - '!node_modules/.prisma/**'
+    - '!node_modules/@prisma/engines/**'
+    - '!node_modules/.bin/**'
+    - '!test/**'
+    - '!dist/**'
+    - '!.git/**'
+    - '!.github/**'
+    - '!.vscode/**'
+    - '!docs/**'
+    - '!.env*'
+    - '!README.md'
+    - '!*.log'
+    - '!*.ts'
+    - '!tsconfig.json'
+    - '!jest.config.js'
+    - '!.prettierrc'
+    - '!.eslintrc'
