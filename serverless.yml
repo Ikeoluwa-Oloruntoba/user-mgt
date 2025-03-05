@@ -19,6 +19,7 @@ functions:
   - ${file(./src/routes/serverless/functions/address.yml)}
 
 package:
+  individually: true
   patterns:
     - '!node_modules/.prisma/**'
     - '!node_modules/@prisma/engines/**'
