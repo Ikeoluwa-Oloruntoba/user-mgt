@@ -61,6 +61,8 @@ The easiest way to develop and test your function is to use the `dev` command:
 ```
 serverless dev
 ```
+<img width="918" alt="image" src="https://github.com/user-attachments/assets/cf849797-df2f-4e03-9fce-a281678cb576" />
+
 
 This will start a local emulator of AWS Lambda and tunnel your requests to and from AWS Lambda, allowing you to interact with your function as if it were running in the cloud.
 
