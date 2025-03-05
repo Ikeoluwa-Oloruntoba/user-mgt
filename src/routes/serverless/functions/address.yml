@@ -1,0 +1,18 @@
+getAddressByUserId:
+  handler: src/modules/addresses/handlers/getAddressByUser.handler
+  events:
+    - http:
+        path: addresses/{userId}
+        method: get
+createAddress:
+  handler: src/modules/addresses/handlers/createAddress.handler
+  events:
+    - http:
+        path: addresses/{userId}
+        method: post
+updateAddress:
+  handler: src/modules/addresses/handlers/updateAddress.handler
+  events:
+    - http:
+        path: addresses/{userId}
+        method: patch

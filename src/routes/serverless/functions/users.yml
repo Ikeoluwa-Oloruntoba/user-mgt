@@ -1,0 +1,24 @@
+getUsers:
+  handler: src/modules/users/handlers/getUsers.handler
+  events:
+    - http:
+        path: users
+        method: get
+createUser:
+  handler: src/modules/users/handlers/createUser.handler
+  events:
+    - http:
+        path: user/create
+        method: post
+getUserById:
+  handler: src/modules/users/handlers/getUser.handler
+  events:
+    - http:
+        path: users/{id}
+        method: get
+getUsersCount:
+  handler: src/modules/users/handlers/getUsersCount.handler
+  events:
+    - http:
+        path: users/count
+        method: get

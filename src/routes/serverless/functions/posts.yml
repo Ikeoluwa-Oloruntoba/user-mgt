@@ -1,0 +1,18 @@
+getPosts:
+  handler: src/modules/posts/handlers/getPosts.handler
+  events:
+    - http:
+        path: posts
+        method: get
+createPost:
+  handler: src/modules/posts/handlers/createPost.handler
+  events:
+    - http:
+        path: posts
+        method: post
+deletePost:
+  handler: src/modules/posts/handlers/deletePost.handler
+  events:
+    - http:
+        path: posts/{id}
+        method: delete

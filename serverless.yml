@@ -1,5 +1,5 @@
 # "service" is the name of this project. This will also be added to your AWS resource names.
-service: xhr-auth-service
+service: user-management
 
 build:
   esbuild: false
@@ -14,9 +14,6 @@ plugins:
   - serverless-dotenv-plugin
 
 functions:
-  sendNotification:
-    handler: src/modules//handlers/Handler.handler
-    events: 
-      - httpApi:
-          path: /api/*
-          method: post
+  - ${file(./src/routes/serverless/functions/users.yml)}
+  - ${file(./src/routes/serverless/functions/posts.yml)}
+  - ${file(./src/routes/serverless/functions/address.yml)}
